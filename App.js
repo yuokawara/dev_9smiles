@@ -1,26 +1,12 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Sample from './src/elements/Sample';
+import FirstFB from './src/elements/FirstFB';
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.containerrow}>
-          <Sample />
-          <Sample />
-          <Sample />
-        </View>
-        <View style={styles.containerrow}>
-          <Sample />
-          <Sample />
-          <Sample />
-        </View>
-        <View style={styles.containerrow}>
-          <Sample />
-          <Sample />
-          <Sample />
-        </View>
+        <FirstFB />
       </View>
     );
   }
