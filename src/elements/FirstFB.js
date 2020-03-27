@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 class FirstFB extends React.Component {
   render() {
@@ -7,24 +8,35 @@ class FirstFB extends React.Component {
       <View style={styles.container}>
         <View style={styles.Sub_container1}>
           <View style={styles.container_row1}>
-            <TextInput style={styles.row_Text} placeholder="text" />
+            <TextInput style={styles.row_Text} placeholder="text1" name="text1" />
           </View>
           <View style={styles.container_row2}>
-            <TextInput style={styles.row_Text} placeholder="text" />
+            <TextInput style={styles.row_Text} placeholder="text2" name="text2" />
           </View>
           <View style={styles.container_row3}>
-            <TextInput style={styles.row_Text} placeholder="text" />
+            <TextInput style={styles.row_Text} placeholder="text3" name="text3" />
           </View>
         </View>
         <View style={styles.Sub_container2}>
           <View style={styles.container_row4}>
-            <TextInput style={styles.row_Text} placeholder="text" />
+            <TextInput style={styles.row_Text} placeholder="text4" name="text4" />
           </View>
           <View style={styles.container_row5}>
-            <TextInput style={styles.row_Text} placeholder="text" />
+            <TextInput style={styles.row_Text} placeholder="text5" name="text5" />
           </View>
           <View style={styles.container_row6}>
-            <TextInput style={styles.row_Text} placeholder="text" />
+            <TextInput style={styles.row_Text} placeholder="text6" name="text6" />
+          </View>
+        </View>
+        <View style={styles.Sub_container2}>
+          <View style={styles.container_row7}>
+            <TextInput style={styles.row_Text} placeholder="text7" name="text7" />
+          </View>
+          <View style={styles.container_row8}>
+            <TextInput style={styles.row_Text} placeholder="text8" name="text8" />
+          </View>
+          <View style={styles.container_row9}>
+            <TextInput style={styles.row_Text} placeholder="text9" name="text9" />
           </View>
         </View>
       </View>
@@ -60,7 +72,7 @@ const styles = StyleSheet.create({
   container_row1: {
     width: 120,
     height: 120,
-    backgroundColor: '#efefef',
+    backgroundColor: '#FFDEAD',
     justifyContent: 'center',
   },
   container_row2: {
@@ -91,6 +103,24 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     backgroundColor: '#FFCCFF',
+    justifyContent: 'center',
+  },
+  container_row7: {
+    width: 120,
+    height: 120,
+    backgroundColor: '#BBFFFF',
+    justifyContent: 'center',
+  },
+  container_row8: {
+    width: 120,
+    height: 120,
+    backgroundColor: '#FF9872',
+    justifyContent: 'center',
+  },
+  container_row9: {
+    width: 120,
+    height: 120,
+    backgroundColor: '#9ACD32',
     justifyContent: 'center',
   },
 });
