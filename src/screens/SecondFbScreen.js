@@ -1,18 +1,18 @@
 import React from 'react';
 import { View } from 'react-native';
 import AppBar from '../components/AppBar';
-import FirstFB from '../components/FirstFB';
+import SecondFB from '../components/SecondFB';
 
 
-class FirstFbScreen extends React.Component {
+class SecondFbScreen extends React.Component {
   render() {
     return (
       <View>
         <AppBar />
-        <FirstFB />
+        <SecondFB />
       </View>
     );
   }
 }
 
-export default FirstFbScreen;
+export default SecondFbScreen;
