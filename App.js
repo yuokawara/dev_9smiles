@@ -1,29 +1,13 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import FirstFB from './src/components/FirstFB';
-import Button from './src/elements/Button';
+import { StyleSheet, View } from 'react-native';
+import FirstFbScreen from './src/screens/FirstFb Screen';
 
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <LinearGradient
-          colors={['rgba(0,0,0,0.4)', 'transparent']}
-          style={{
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            top: 0,
-            height: 300,
-          }}
-        />
-        <View style={styles.title}>
-          <Text style={styles.title_text}>9smiles test</Text>
-        </View>
-        <FirstFB />
-        <Button />
+        <FirstFbScreen />
       </View>
     );
   }
@@ -36,18 +20,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#98FB98',
   },
-
-  // タイトル
-  title: {
-    top: 50,
-  },
-  title_text: {
-    fontSize: 40,
-    fontWeight: 'bold',
-    fontFamily: 'System',
-  },
-
-
 });
 
 export default App;

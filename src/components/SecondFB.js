@@ -2,16 +2,14 @@
 import React from 'react';
 import { StyleSheet, TextInput, View, Text } from 'react-native';
 
-
-class FirstFB extends React.Component {
+// FirstFBのNextを押したのちSecondFBに変異する。基本構造は同じ
+class SecondFB extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.Sub_container1}>
           <View style={styles.container_row1}>
             <TextInput style={styles.row_Text} placeholder="text1" name="text1" />
-
-            {/* テストでbuttonを入れる */}
             <View style={styles.button}>
               <Text style={styles.button_text}>Next</Text>
             </View>
@@ -145,4 +143,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FirstFB;
+export default SecondFB;
