@@ -1,20 +1,29 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import FirstFB from './src/elements/FirstFB';
 import { LinearGradient } from 'expo-linear-gradient';
+import FirstFB from './src/components/FirstFB';
+import Button from './src/elements/Button';
 
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <LinearGradient
+          colors={['rgba(0,0,0,0.4)', 'transparent']}
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            height: 300,
+          }}
+        />
         <View style={styles.title}>
           <Text style={styles.title_text}>9smiles test</Text>
         </View>
         <FirstFB />
-        <View style={styles.button}>
-          <Text style={styles.button_text}>button</Text>
-        </View>
+        <Button />
       </View>
     );
   }
@@ -25,12 +34,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#efefef',
+    backgroundColor: '#98FB98',
   },
 
   // タイトル
   title: {
-    top: 100,
+    top: 50,
   },
   title_text: {
     fontSize: 40,
@@ -38,30 +47,7 @@ const styles = StyleSheet.create({
     fontFamily: 'System',
   },
 
-  // buttonのスタイル グラデーションを付けたい。
-  button: {
-    position: 'absolute',
-    bottom: 100,
-    width: 100,
-    height: 50,
-    backgroundColor: '#00BFFF',
-    borderRadius: 25,
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
-  },
-  button_text: {
-    fontSize: 25,
-    lineHeight: 25,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
+
 });
 
 export default App;

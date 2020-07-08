@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import { StyleSheet, TextInput, View, Text } from 'react-native';
+
 
 class FirstFB extends React.Component {
   render() {
@@ -9,6 +10,10 @@ class FirstFB extends React.Component {
         <View style={styles.Sub_container1}>
           <View style={styles.container_row1}>
             <TextInput style={styles.row_Text} placeholder="text1" name="text1" />
+            {/* テストでbuttonを入れる */}
+            <View style={styles.button}>
+              <Text style={styles.button_text}>Next</Text>
+            </View>
           </View>
           <View style={styles.container_row2}>
             <TextInput style={styles.row_Text} placeholder="text2" name="text2" />
@@ -28,7 +33,7 @@ class FirstFB extends React.Component {
             <TextInput style={styles.row_Text} placeholder="text6" name="text6" />
           </View>
         </View>
-        <View style={styles.Sub_container2}>
+        <View style={styles.Sub_container3}>
           <View style={styles.container_row7}>
             <TextInput style={styles.row_Text} placeholder="text7" name="text7" />
           </View>
@@ -45,6 +50,7 @@ class FirstFB extends React.Component {
 }
 
 // マスのスタイル調整
+// contaner_rowは、一括で変更できる様に調整したい。
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -58,10 +64,16 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 3,
   },
+  // 上段
   Sub_container1: {
     flexDirection: 'row',
   },
+  // 中段
   Sub_container2: {
+    flexDirection: 'row',
+  },
+  // 下段
+  Sub_container3: {
     flexDirection: 'row',
   },
   row_Text: {
@@ -70,58 +82,65 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   container_row1: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#FFDEAD',
     justifyContent: 'center',
   },
   container_row2: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#99CCFF',
     justifyContent: 'center',
   },
   container_row3: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#9999FF',
     justifyContent: 'center',
   },
   container_row4: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#CCFFCC',
     justifyContent: 'center',
   },
   container_row5: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#FFFF66',
     justifyContent: 'center',
   },
   container_row6: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#FFCCFF',
     justifyContent: 'center',
   },
   container_row7: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#BBFFFF',
     justifyContent: 'center',
   },
   container_row8: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#FF9872',
     justifyContent: 'center',
   },
   container_row9: {
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     backgroundColor: '#9ACD32',
     justifyContent: 'center',
+  },
+
+  // buttonをテスト中
+  button_text: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
